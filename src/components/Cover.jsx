@@ -68,66 +68,56 @@ export default function Cover() {
           </div>
           <div className="w-[926px] h-[136px] flex-col items-end ">
             <div className="flex  items-baseline mb-6 ">
-              <img
-                src={vector4}
-                className="w-[66.955px] h-[94.648px] fill-white"
-              />
-              <img
-                src={vector1}
-                className="w-[56.689px] h-[73.425px] fill-white"
-              />
-              <img
-                src={vector2}
-                className="w-[56.689px] h-[73.425px] fill-white"
-              />
-              <img
-                src={vector3}
-                className="w-[66.955px] h-[94.648px] fill-white"
-              />
-              <img
-                src={vector9}
-                className="w-[56.689px] h-[73.425px] fill-white"
-              />
-              <img
-                src={vector8}
-                className="w-[56.689px] h-[73.425px] fill-white"
-              />
-              <img
-                src={vector7}
-                className="w-[56.689px] h-[73.425px] fill-white "
-              />
-              <img
-                src={vector10}
-                className="w-[56.689px] h-[73.425px] fill-white mr-[56px]"
-              />
-              <img
-                src={vector11}
-                className="w-[66.955px] h-[94.648px] fill-white"
-              />
-              <img
-                src={vector13}
-                className="w-[17.129px] h-[98.177px] fill-white"
-              />
-              <img
-                src={vector12}
-                className="w-[58.896px] h-[110.601px] fill-white "
-              />
-              <img
-                src={vector14}
-                className="w-[17.129px] h-[98.177px] fill-white"
-              />
-              <img
-                src={vector15}
-                className="w-[35.163px] h-[94.648px] fill-white"
-              />
-              <img
-                src={vector16}
-                className="w-[60.336px] h-[73.425px] fill-white"
-              />
-              <img
-                src={vector17}
-                className="w-[17.129px] h-[103.176px] fill-white mr-[10px]"
-              />
+              {[
+                vector4,
+                vector1,
+                vector2,
+                vector3,
+                vector9,
+                vector8,
+                vector7,
+                vector10,
+                vector11,
+                vector14,
+                vector12,
+                vector13,
+                vector15,
+                vector16,
+                vector17,
+              ].map((vector, index) => (
+                <img
+                  key={index}
+                  src={vector}
+                  className={`fill-white ${
+                    index === 7 ? "mr-[56px]" : index === 14 ? "mr-[10px]" : ""
+                  }`}
+                  style={{
+                    width:
+                      index === 0 || index === 3 || index === 8
+                        ? "66.955px"
+                        : index === 10
+                        ? "58.896px"
+                        : index === 11 || index === 9 || index === 14
+                        ? "17.129px"
+                        : index === 12
+                        ? "35.163px"
+                        : index === 13
+                        ? "60.336px"
+                        : "56.689px",
+                    height:
+                      index === 0 || index === 3 || index === 8
+                        ? "94.648px"
+                        : index === 10
+                        ? "110.601px"
+                        : index === 11 || index === 12 || index === 9
+                        ? "98.177px"
+                        : index === 14
+                        ? "103.176px"
+                        : "73.425px",
+                  }}
+                />
+              ))}
+
               <div className="flex self-start ">
                 <img
                   src={ai}
@@ -136,27 +126,37 @@ export default function Cover() {
               </div>
             </div>
             <div className="flex">
-              <img src={logo1} className="fill-white" />
-              <img src={logo21} className="fill-white" />
-              <img src={logo2} className="fill-white" />
-              <img src={logo3} className="fill-white" />
-              <img src={logo4} className="fill-white" />
-              <img src={logo5} className="fill-white" />
-              <img src={logo6} className="fill-white" />
-              <img src={logo7} className="fill-white" />
-              <img src={logo8} className="fill-white" />
-              <img src={logo9} className="fill-white pr-[23px]" />
-              <img src={logo10} className="fill-white" />
-              <img src={logo11} className="fill-white" />
-              <img src={logo12} className="fill-white pr-[23px]" />
-              <img src={logo13} className="fill-white" />
-              <img src={logo14} className="fill-white" />
-              <img src={logo15} className="fill-white" />
-              <img src={logo16} className="fill-white" />
-              <img src={logo17} className="fill-white" />
-              <img src={logo18} className="fill-white" />
-              <img src={logo19} className="fill-white" />
-              <img src={logo20} className="fill-white" />
+              {[
+                logo1,
+                logo21,
+                logo2,
+                logo3,
+                logo4,
+                logo5,
+                logo6,
+                logo7,
+                logo8,
+                logo9,
+                logo10,
+                logo11,
+                logo12,
+                logo13,
+                logo14,
+                logo15,
+                logo16,
+                logo17,
+                logo18,
+                logo19,
+                logo20,
+              ].map((logo, index) => (
+                <img
+                  key={index}
+                  src={logo}
+                  className={`fill-white ${
+                    index === 9 || index === 12 ? "mr-[23px]" : ""
+                  }`}
+                />
+              ))}
             </div>
           </div>
         </div>

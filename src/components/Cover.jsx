@@ -49,25 +49,25 @@ import Vector from "./Vector.jsx";
 
 export default function Cover() {
   return (
-    <div className="w-full h-full bg-linear-[144deg,#00ADCC_8.02%,#144CBD_53.53%,#0B2360_82.11%]  ">
+    <div className="w-full h-full relative bg-linear-[144deg,#00ADCC_8.02%,#144CBD_53.53%,#0B2360_82.11%]  ">
+      <div className="w-[629px] h-[628px]  flex items-end absolute z-50 top-0 right-0 ">
+        <Vector />
+      </div>
       <div className="  flex relative  pt-[157px] pl-22 w-full h-full ">
-        <div className="w-[629px] h-[628px]  flex items-end absolute z-50 bottom-3 right-[60px]">
-          <Vector />
-        </div>
-        <div className="text-white/90 font-black text-[128px]  flex  ">
+        <div className="text-white/90 font-black text-[128px]  mr-[1163px] flex  ">
           <span> CHAT</span>
           <span className="text-white/20 line-through ">GPT</span>
         </div>
 
-        <div className="flex items-end absolute right-0 z-10">
-          <div className="flex items-end mr-[51.36px]">
+        <div className="flex w-[1118px] h-[206px] justify-between items-end absolute right-0 z-10 mr-[109px] mb-[717px] ml-[691px] overflow-hidden">
+          <div className="flex items-end ">
             <img
               src={vector}
-              className="w-[89.63px] h-[204.22px]  fill-white"
+              className="w-[89.631px] h-[204.227px]  fill-white"
             />
           </div>
-          <div className="w-[926px] h-[136px] flex-col items-end ">
-            <div className="flex  items-baseline mb-6 ">
+          <div className="flex-col items-end  overflow-hidden ">
+            <div className="flex w-[926px] h-[136px]  items-baseline  ">
               {[
                 vector4,
                 vector1,
